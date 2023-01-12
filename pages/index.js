@@ -77,9 +77,9 @@ export default function Home() {
           </form>
         </div>
 
-        {/*display Weather */}
-        {/* show components unless we have the data */}
+        {/*display Weather: show components unless we have the data */}
         {weather.main && <Weather data={weather} />}
+        
       </div>
     );
   }
