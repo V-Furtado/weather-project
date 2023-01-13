@@ -50,7 +50,7 @@ export default function Home() {
         </Head>
 
         {/* Overlay */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-light/90 max-w-[500px] w-full z-[1]" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-light/90 max-w-[500px] w-full z-[1] " />
 
         {/* Background image */}
         <Image
@@ -60,9 +60,7 @@ export default function Home() {
           className="object-cover"
         />
         <span className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
-          <h1 className="text-2xl font-bold text-yellow-100">
-            View temperature from any city in world
-          </h1>
+          <h1 className="text-2xl font-bold text-yellow-100">View temperature for any city globally.</h1>
         </span>
 
         {/* Search Form */}
