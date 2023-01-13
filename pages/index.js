@@ -86,7 +86,7 @@ export default function Home() {
         </div>
         {/*display Weather: show components unless we have the data */}
         {weather.main && <Weather data={weather} />}
-        <div className="relative top-0 bottom-0 left-10 right-0 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
+        <div className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
           <Footer />
         </div>
       </div>
