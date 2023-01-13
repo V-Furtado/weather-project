@@ -59,15 +59,16 @@ export default function Home() {
           alt="The desert sand with extinct volcanoes in the background in Maio, Cape Verde"
           className="object-cover"
         />
-        <span className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
+        {/* <span className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
           <h1 className="text-2xl font-bold text-yellow-100">View temperature for any city globally.</h1>
-        </span>
+        </span> */}
 
         {/* Search Form */}
-        <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
+        <div className="relative flex flex-col justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
+        <h1 className="p-2 text-2xl font-bold text-yellow-100">View temperature for any city globally.</h1>
           <form
             onSubmit={fetchWeather}
-            className="flex items-center justify-between w-full p-2 m-auto text-white bg-transparent border border-gray-200 form-horizontal rounded-3xl"
+            className="flex items-center justify-between p-2 m-auto text-white bg-transparent border border-gray-200 form-horizontal rounded-3xl"
           >
             <div className="">
               <input
