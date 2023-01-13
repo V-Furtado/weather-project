@@ -57,7 +57,7 @@ export default function Home() {
           src="https://images.unsplash.com/photo-1591870408955-9f5f749d396c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3470&q=80"
           layout="fill"
           alt="The desert sand with extinct volcanoes in the background in Maio, Cape Verde"
-          className="object-cover hover:object-scale-down "
+          className="object-cover"
         />
         {/* <span className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
           <h1 className="text-2xl font-bold text-yellow-100">View temperature for any city globally.</h1>
@@ -88,7 +88,7 @@ export default function Home() {
         
         {/*display Weather: show components unless we have the data */}
         {weather.main && <Weather data={weather} />}
-        <div className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
+        <div className="relative sm:flex sm:items-center sm:justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
           <Footer />
         </div>
         
