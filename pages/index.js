@@ -15,7 +15,6 @@ export default function Home() {
   const [weather, setWeather] = useState({});
   const [loading, setLoading] = useState(false);
   const [city, setCity] = useState("");
-  
 
   // endpoint
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`;
@@ -25,13 +24,16 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     // fetch weather data with axios
-    axios.get(url).then((response) => {
-      setWeather(response.data);
-      // console.log(response.data)
-    }).catch(error => {
-      console.log(error);
-    });
-    setCity('');
+    axios
+      .get(url)
+      .then((response) => {
+        setWeather(response.data);
+        // console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    setCity("");
     setLoading(false);
   };
 
@@ -48,7 +50,7 @@ export default function Home() {
         </Head>
 
         {/* Overlay */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-light/90 z-[1]" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-light/90 max-w-[500px] w-full z-[1]" />
 
         {/* Background image */}
         <Image
@@ -57,17 +59,14 @@ export default function Home() {
           alt="The desert sand with extinct volcanoes in the background in Maio, Cape Verde"
           className="object-cover"
         />
-        <span className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
-          <h1 className="text-2xl font-bold text-yellow-100">View temperature from any city in world</h1>
-          </span>
+        <span className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
+          <h1 className="text-2xl font-bold text-yellow-100">
+            View temperature from any city in world
+          </h1>
+        </span>
 
         {/* Search Form */}
         <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
-        {/* <span className="relative top-0 bottom-0 left-10 right-0 flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
-          <p className="text-2xl text-bold">View temperature from any city in world</p>
-          </span> */}
-          {/* <p className="text-2xl text-bold">View temperature from any city in world</p> */}
-          
           <form
             onSubmit={fetchWeather}
             className="flex items-center justify-between w-full p-2 m-auto text-white bg-transparent border border-gray-200 form-horizontal rounded-3xl"
@@ -84,19 +83,13 @@ export default function Home() {
               <BsSearch size={25} />
             </button>
           </form>
-          
         </div>
-
-          
         {/*display Weather: show components unless we have the data */}
         {weather.main && <Weather data={weather} />}
-        <div className="relative top-0 bottom-0 left-10 right-0 flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
-        <Footer/>
+        <div className="relative top-0 bottom-0 left-10 right-0 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
+          <Footer />
         </div>
-        
-        
       </div>
-      
     );
   }
 }
