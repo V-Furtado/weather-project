@@ -57,18 +57,18 @@ export default function Home() {
           src="https://images.unsplash.com/photo-1591870408955-9f5f749d396c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3470&q=80"
           layout="fill"
           alt="The desert sand with extinct volcanoes in the background in Maio, Cape Verde"
-          className="object-cover"
+          className="object-cover hover:object-scale-down "
         />
         {/* <span className="relative top-0 bottom-0 left-5 right-10 flex justify-between items-center max-w-[500px] w-full m-auto pt-0 text-white z-10">
           <h1 className="text-2xl font-bold text-yellow-100">View temperature for any city globally.</h1>
         </span> */}
 
         {/* Search Form */}
-        <div className="relative flex flex-col justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
-        <h1 className="p-2 text-2xl font-bold text-yellow-100">View temperature for any city globally.</h1>
+        <div className="relative flex flex-col justify-between items-center max-w-[500px] w-full m-auto pt-1 text-white z-10">
+        <h1 className="p-1 text-2xl font-bold text-yellow-100">View temperature for any city globally.</h1>
           <form
             onSubmit={fetchWeather}
-            className="flex items-center justify-between p-2 m-auto text-white bg-transparent border border-gray-200 form-horizontal rounded-3xl"
+            className="flex items-center justify-between p-1 m-auto text-white bg-transparent border border-gray-200 form-horizontal rounded-3xl"
           >
             <div className="">
               <input
