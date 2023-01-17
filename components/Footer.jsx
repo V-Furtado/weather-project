@@ -8,7 +8,7 @@ const Footer = () => {
       style={{ width: "100%" }}
     >
       {/* © 2022 Copyright: */}
-      <p>Copyright &copy; {currentYear} Vanderley Furtado. All rights reserved.</p>
+      <p className="text-center">Copyright &copy; {currentYear} Vanderley Furtado. All rights reserved.</p>
     </div>
   );
 };
